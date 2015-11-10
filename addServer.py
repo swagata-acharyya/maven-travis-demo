@@ -27,8 +27,61 @@ m2 = xml.dom.minidom.parse(homedir + '/.m2/settings.xml')
 settings = m2.getElementsByTagName("settings")[0]
 
 
+mirrorNodes = settings.getElementsByTagName("mirrors")
 
-serversNodes = settings.getElementsByTagName("repositories")
+if not mirrorNodes:
+
+  mirrorNode = m2.createElement("mirrors")
+
+  settings.appendChild(mirrorNode)
+
+else:
+
+  mirrorNode = mirrorNodes[0]
+
+  
+
+sonatypeMirrorNode = m2.createElement("mirror")
+
+sonatypeMirrorId = m2.createElement("id")
+
+sonatypeMirrorOf = m2.createElement("mirrorOf")
+
+sonatypeMirrorUrl = m2.createElement("url")
+
+
+
+idNodeMirror = m2.createTextNode("nexus")
+
+userNodeMirror = m2.createTextNode("*,!cloudant-sync-eap,!maven-central,!oss.sonatype.org-jayway-snapshots")
+
+urlNodeMirror = m2.createTextNode("http://nexus.miairline.com/nexus/content/groups/public/")
+
+
+
+sonatypeMirrorId.appendChild(idNodeMirror)
+
+sonatypeMirrorOf.appendChild(userNodeMirror)
+
+sonatypeMirrorUrl.appendChild(urlNodeMirror)
+
+
+
+sonatypeMirrorNode.appendChild(sonatypeMirrorId)
+
+sonatypeMirrorNode.appendChild(sonatypeMirrorOf)
+
+sonatypeMirrorNode.appendChild(sonatypeMirrorUrl)
+
+
+
+mirrorNode.appendChild(sonatypeMirrorUrl)
+
+
+
+
+
+serversNodes = settings.getElementsByTagName("servers")
 
 if not serversNodes:
 
