@@ -8,5 +8,6 @@ android:
     - android-19
 after_success:
   - python addServer.py
+script:
   - mvn clean install --settings ~/.m2/mySettings.xml
 
