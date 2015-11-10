@@ -69,7 +69,7 @@ sonatypeMirrorNode.appendChild(sonatypeMirrorUrl)
 
 
 
-mirrorNode.appendChild(sonatypeMirrorUrl)
+mirrorNode.appendChild(sonatypeMirrorNode)
 
 
 
