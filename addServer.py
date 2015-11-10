@@ -28,7 +28,7 @@ settings = m2.getElementsByTagName("settings")[0]
 
 
 
-serversNodes = settings.getElementsByTagName(“repositories”)
+serversNodes = settings.getElementsByTagName("repositories")
 
 if not serversNodes:
 
