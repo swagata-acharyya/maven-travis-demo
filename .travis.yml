@@ -6,4 +6,7 @@ android:
 
     # The SDK version used to compile your project
     - android-19
-script: mvn clean install
+after_success:
+  - python addServer.py
+  - mvn clean install --settings ~/.m2/mySettings.xml
+
