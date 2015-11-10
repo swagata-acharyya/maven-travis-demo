@@ -8,9 +8,18 @@
   <packaging>apk</packaging>
 
   <name>HelloFlashLight</name>
+
+	<parent>
+		<groupId>com.miairline.commons</groupId>
+		<artifactId>top-level-pom</artifactId>
+		<version>1.0.0</version>
+		<relativePath />
+	</parent>
+
   <properties>
     <!-- at test time this will be overridden with snapshot version -->
     <it-plugin.version>4.3.0</it-plugin.version>
+    <domain.version>4.1.22</domain.version>
   </properties>
   <dependencies>
     <dependency>
@@ -19,6 +28,44 @@
       <version>4.1.1.4</version>
       <scope>provided</scope>
     </dependency>
+
+<dependency>
+			<groupId>com.miairline</groupId>
+			<artifactId>domain</artifactId>
+			<version>${domain.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.ektorp</groupId>
+					<artifactId>org.ektorp.spring</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-log4j12</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>log4j</groupId>
+					<artifactId>log4j</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+				<!-- Included as default android library -->
+				<exclusion>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpclient</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.httpcomponents</groupId>
+					<artifactId>httpclient-cache</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
   </dependencies>
 
   <build>
