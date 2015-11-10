@@ -1,3 +1,6 @@
+[![Build Status](https://magnum.travis-ci.com/swagata-acharyya/maven-travis-demo.svg?token=huNz94uYJwxMqeCY1WjU&branch=master)](https://magnum.travis-ci.com/swagata-acharyya/maven-travis-demo)
+
+
 HelloFlashlight is a simple sample application written by Manfred Moser <manfred@simpligility.com>
 
 It was created to demonstrate the minimal pom.xml setup needed to use the android-maven-plugin
