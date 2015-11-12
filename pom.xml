@@ -21,6 +21,8 @@
     <it-plugin.version>4.3.0</it-plugin.version>
     <domain.version>4.1.22</domain.version>
     <sonar.host.url>http://sonar.miairline.com/sessions/new</sonar.host.url>
+    <sonar.login>simpragma</sonar.login>
+    <sonar.password>qualityRules</sonar.password>
     <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonar?useUnicode=true&amp;characterEncoding=utf8&amp;rewriteBatchedStatements=true&amp;useConfigs=maxPerformance</sonar.jdbc.url>
     <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
     <sonar.jdbc.username>sonar</sonar.jdbc.username>
