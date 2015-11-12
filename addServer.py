@@ -49,7 +49,7 @@ idNodeMirror = m2.createTextNode("nexus")
 
 userNodeMirror = m2.createTextNode("*,!cloudant-sync-eap,!maven-central,!oss.sonatype.org-jayway-snapshots")
 
-urlNodeMirror = m2.createTextNode("http://nexus.miairline.com/nexus/content/groups/public/")
+urlNodeMirror = m2.createTextNode(os.environ["NEXUS_URL"])
 
 
 
@@ -101,9 +101,9 @@ sonatypeServerPass = m2.createElement("password")
 
 idNode = m2.createTextNode("nexus")
 
-userNode = m2.createTextNode("admin")
+userNode = m2.createTextNode(os.environ["NEXUS_USERNAME"])
 
-passNode = m2.createTextNode("EOCa1uiceT")
+passNode = m2.createTextNode(os.environ["NEXUS_PASSWORD"])
 
 
 
