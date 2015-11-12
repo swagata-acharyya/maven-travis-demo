@@ -20,6 +20,11 @@
     <!-- at test time this will be overridden with snapshot version -->
     <it-plugin.version>4.3.0</it-plugin.version>
     <domain.version>4.1.22</domain.version>
+    <sonar.host.url>http://sonar.miairline.com/sessions/new</sonar.host.url>
+    <sonar.jdbc.url>jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance</sonar.jdbc.url>
+    <sonar.jdbc.driver>com.mysql.jdbc.Driver</sonar.jdbc.driver>
+    <sonar.jdbc.username>sonar</sonar.jdbc.username>
+    <sonar.jdbc.password>sonar</sonar.jdbc.password>
   </properties>
   <dependencies>
     <dependency>
