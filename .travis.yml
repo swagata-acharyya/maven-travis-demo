@@ -1,4 +1,8 @@
 language: android
+
+env:
+- BRANCH_NAME=$TRAVIS_BRANCH
+
 android:
   components:
     # The BuildTools version used by your project
