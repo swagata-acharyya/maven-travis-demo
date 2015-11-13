@@ -26,7 +26,7 @@ public class HelloFlashlight extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-        System.out.println(“Hello Sonar! Catch me”);
+        System.out.println("Hello Sonar! Catch me");
 
         // get all the view components
         table = (TableLayout) findViewById(R.id.Table);
