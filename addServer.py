@@ -9,16 +9,12 @@ import os.path
 import xml.dom.minidom
 
 
-
-
-
 homedir = os.path.expanduser("~")
-
-
 
 m2 = xml.dom.minidom.parse(homedir + '/.m2/settings.xml')
 
 settings = m2.getElementsByTagName("settings")[0]
+
 
 
 mirrorNodes = settings.getElementsByTagName("mirrors")
@@ -33,7 +29,6 @@ else:
 
   mirrorNode = mirrorNodes[0]
 
-  
 
 sonatypeMirrorNode = m2.createElement("mirror")
 
@@ -70,9 +65,6 @@ sonatypeMirrorNode.appendChild(sonatypeMirrorUrl)
 
 
 mirrorNode.appendChild(sonatypeMirrorNode)
-
-
-
 
 
 serversNodes = settings.getElementsByTagName("servers")
