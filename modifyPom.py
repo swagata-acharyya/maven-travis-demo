@@ -14,7 +14,7 @@ m2 = xml.dom.minidom.parse('pom.xml')
 properties = m2.getElementsByTagName("properties")[0]
 branchNode = m2.createElement("sonar.branch")
 
-dataNodeBranch = m2.createTextNode($TRAVIS_BRANCH)
+dataNodeBranch = m2.createTextNode('$TRAVIS_BRANCH')
 branchNode.appendChild(dataNodeBranch)
 
 properties.appendChild(branchNode)
