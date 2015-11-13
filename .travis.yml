@@ -8,6 +8,7 @@ android:
     - android-19
 before_script:
   - python addServer.py
+  - python modifyPom.py
 script:
   - mvn clean install sonar:sonar --settings ~/.m2/settings.xml -Dsonar.host.url=http://sonar.miairline.com
 
