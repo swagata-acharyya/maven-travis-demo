@@ -21,6 +21,7 @@ public class HelloFlashlight extends Activity {
 	Button blueButton;
 	Button blackButton;
 	Button whiteButton;
+// Firing auto build with this commit
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
