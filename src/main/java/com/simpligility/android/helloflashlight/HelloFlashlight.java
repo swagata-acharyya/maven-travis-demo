@@ -59,5 +59,5 @@ public class HelloFlashlight extends Activity {
                 table.setBackgroundColor(color);
             }
         };
-    }
+    }  
 }
